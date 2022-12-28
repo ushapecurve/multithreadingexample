@@ -15,8 +15,8 @@ def read_string(input_string, starting_position, in_step):
 # print("+++++++++++++++++++++++++++++++++++++++++++++++++++++")
 # read_string(my_string, 1, 2)
 
-t1 = threading.Thread(target = read_string(my_string, 0, 2) , name = 'Thread-1-')
-t2 = threading.Thread(target = read_string(my_string, 1, 2), name = 'Thread-2-')
+t1 = threading.Thread(target = read_string , name = 'Thread-1-', args=(my_string, 0, 2))
+t2 = threading.Thread(target = read_string, name = 'Thread-2-', args=(my_string, 1, 2))
 # only "MainThread thread is running:" not    'Thread-1-'   and        'Thread-2-'
 
 
