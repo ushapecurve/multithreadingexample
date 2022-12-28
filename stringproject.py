@@ -10,8 +10,8 @@ class StringReader1(Thread):
         self.name = name 
         
     def run(self):
-        for i in my_string[0::2]:
-            print('%s thread is running: %s \n' % (self.name, i ))
+        for symbol in my_string[0::2]:
+            print('%s thread is running: %s \n' % (self.name, symbol ))
             time.sleep(0.5)
             
 
@@ -22,8 +22,8 @@ class StringReader2(Thread):
         self.name = name 
         
     def run(self):
-        for i in my_string[1::2]:
-            print('%s thread is running: %s \n' % (self.name, i ))
+        for symbol in my_string[1::2]:
+            print('%s thread is running: %s \n' % (self.name, symbol ))
             time.sleep(0.5)
 
 sreader1 = StringReader1('Thread #1')
